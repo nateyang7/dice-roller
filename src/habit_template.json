@@ -1,0 +1,12 @@
+{
+    "name": "Habit name",
+    "historic": {
+        "MON": "❌",
+        "TUE": "❌",
+        "WED": "❌",
+        "THU": "❌",
+        "FRI": "❌",
+        "SAT": "❌",
+        "SUN": "❌"
+    }
+}
