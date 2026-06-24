@@ -8,7 +8,7 @@ A simple dice roller made for D&D sessions.
 - [Installation](#Installation)
 - [Usage](#Usage)
 - [Technologies](#Technologies)
-- [Licence]
+- [Licence](#Licence)
 
 ## Features
 ### Dices
