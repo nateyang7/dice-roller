@@ -2,7 +2,7 @@
 
 /** Class representing a dice. */
 export class Dice {
-  /** Number of faces of the dice. */
+  /** Number of faces of the dice (Interval: [1, _faces]). */
   private _faces: number;
 
   /** Current face of the dice. */

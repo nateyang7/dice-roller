@@ -20,8 +20,14 @@ A simple dice roller made for D&D sessions.
 - [ ] D20
 
 ## Installation
+```bash
+git clone https://github.com/nateyang7/dice-roller.git
+```
 
 ## Usage
+```bash
+npm run dev
+```
 
 ## Technologies
 1) HTML5
@@ -30,3 +36,4 @@ A simple dice roller made for D&D sessions.
 4) React
 
 ## Licence
+This project is licensed under the MIT License.
