@@ -1,32 +1,32 @@
-# React + TypeScript + Vite
+# Dice Roller
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Description
+A simple dice roller made for D&D sessions.
 
-Currently, two official plugins are available:
+## Contents
+- [Features](#Features)
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [Technologies](#Technologies)
+- [Licence]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
+### Dices
+- [ ] D4
+- [ ] D6
+- [ ] D8
+- [ ] D10
+- [ ] D12
+- [ ] D20
 
-## React Compiler
+## Installation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Usage
 
-## Expanding the Oxlint configuration
+## Technologies
+1) HTML5
+2) CSS3
+3) TypeScript
+4) React
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Licence
