@@ -8,7 +8,7 @@ function App() {
       </header>
 
       <main>
-        <section id="dices">
+        <section id="dice-choice">
           <h2>Choose a dice to roll</h2>
           <ul>
             <li>D4</li>
@@ -18,6 +18,14 @@ function App() {
             <li>D12</li>
             <li>D20</li>
           </ul>
+        </section>
+
+        <section id="dice-result">
+          <p>Result</p>
+        </section>
+
+        <section id="dice-options">
+          <button>Roll</button>
         </section>
       </main>
 
