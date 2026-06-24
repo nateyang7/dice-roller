@@ -13,6 +13,14 @@ export class Dice {
   }
 
   /**
+   * Get the number of faces of the dice.
+   * @return {number} Number of faces of the dice.
+   */
+  get faces(): number {
+    return this._faces;
+  }
+
+  /**
    * Get the current face.
    * @return {number} Current face of the dice.
    */
@@ -23,5 +31,12 @@ export class Dice {
   /**
    * Roll the dice.
    */
-  roll(): void {}
+  roll(): void {
+    this._face = Math.floor(Math.random() * (this._faces - 1) + 1);
+  }
 }
+
+let test: Dice = new Dice(6);
+console.log(test.face);
+test.roll();
+console.log(test.face);
