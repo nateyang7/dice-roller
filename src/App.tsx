@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import DiceDiv from "./components/DiceDiv/DiceDiv.tsx";
+import DiceDiv from "./components/DiceDiv.tsx";
 import RollButton from "./components/RollButton.tsx";
 
 function App() {
@@ -22,7 +22,6 @@ function App() {
    * @return {void}
    */
   function setCurrentDice(event: React.MouseEvent<HTMLButtonElement>): void {
-    console.log(event);
     setDice(Number(event.currentTarget.value));
   }
 
@@ -30,7 +29,7 @@ function App() {
    * Set the value of the dice after a roll.
    * @return {void}
    */
-  function setCurrentValue() {
+  function setCurrentValue(): void {
     setValue(roll(1, dice));
   }
 
