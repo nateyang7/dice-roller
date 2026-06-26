@@ -3,7 +3,7 @@
 ## Description
 A simple dice roller made for D&D sessions.
 
-(WIP)
+(Functionnal, working on design now)
 
 ## Contents
 - [Features](#Features)
@@ -13,8 +13,10 @@ A simple dice roller made for D&D sessions.
 - [Licence](#Licence)
 
 ## Features
-- [ ] Select a dice
-- [ ] 
+### General
+- [X] Select a dice
+- [X] Roll
+
 ### Dices
 - [ ] D4
 - [ ] D6
