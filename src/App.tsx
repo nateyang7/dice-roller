@@ -47,6 +47,9 @@ function App() {
               </li>
             ))}
           </ul>
+          <p>
+            <strong>Current dice</strong>: D{dice}
+          </p>
         </section>
         <DiceDiv dice={dice} />
         <RollButton label="Roll" onClick={() => console.log("roll")} />
