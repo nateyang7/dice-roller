@@ -1,6 +1,12 @@
-import Dice from "./components/DiceDiv/DiceDiv.tsx";
+// src/App.tsx
+
+import DiceDiv from "./components/DiceDiv/DiceDiv.tsx";
+import { Dice } from "./components/DiceDiv/DiceData.ts";
+import RollButton from "./components/RollButton.tsx";
 
 function App() {
+  const dice: Dice = new Dice(6);
+
   return (
     <>
       <header>
@@ -20,11 +26,8 @@ function App() {
           </ul>
         </section>
 
-        <Dice />
-
-        <section id="dice-options">
-          <button>Roll</button>
-        </section>
+        <DiceDiv dice={dice} />
+        <RollButton label="Roll" onClick={() => dice.roll} />
       </main>
 
       <footer></footer>

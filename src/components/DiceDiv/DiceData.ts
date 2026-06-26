@@ -6,6 +6,10 @@ export class Dice {
   /** Current face of the dice. */
   private _face: number = 1;
 
+  /**
+   * Creates a dice.
+   * @param {number} faces - Number of faces on the dice.
+   */
   constructor(faces: number) {
     this._faces = faces;
   }

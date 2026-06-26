@@ -1,8 +1,10 @@
 import { Dice } from "./DiceData.ts";
 
-export default function DiceDiv() {
-  const dice: Dice = new Dice(6);
+type DiceProps = {
+  dice: Dice;
+};
 
+export default function DiceDiv({ dice }: DiceProps) {
   return (
     <div id="dice-div">
       <p id="dice-face">{dice.face}</p>
