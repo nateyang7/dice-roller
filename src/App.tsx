@@ -1,4 +1,4 @@
-// src/App.tsx
+import Dice from "./components/DiceDiv/DiceDiv.tsx";
 
 function App() {
   return (
@@ -20,9 +20,7 @@ function App() {
           </ul>
         </section>
 
-        <section id="dice-result">
-          <p>Result</p>
-        </section>
+        <Dice />
 
         <section id="dice-options">
           <button>Roll</button>

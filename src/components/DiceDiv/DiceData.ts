@@ -1,5 +1,3 @@
-// src/data/Dice.ts
-
 /** Class representing a dice. */
 export class Dice {
   /** Number of faces of the dice (Interval: [1, _faces]). */
@@ -36,7 +34,9 @@ export class Dice {
   }
 }
 
+/*
 let test: Dice = new Dice(6);
 console.log(test.face);
 test.roll();
 console.log(test.face);
+*/
