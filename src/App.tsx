@@ -16,6 +16,14 @@ function App() {
   ];
   let currentDice = dices[0];
 
+  /**
+   * Set the current dice to a new one depending on the dice choice button.
+   * @return {void}
+   */
+  function setCurrentDice(): void {
+    console.log("Change current dice to INSERT DICE LABEL");
+  }
+
   return (
     <>
       <header>
@@ -23,7 +31,7 @@ function App() {
       </header>
 
       <main>
-        <DiceChoices dices={dices} />
+        <DiceChoices dices={dices} callbackFunction={setCurrentDice} />
         <DiceDiv dice={currentDice} />
         <RollButton label="Roll" onClick={() => currentDice.roll} />
       </main>

@@ -4,16 +4,20 @@ import { Dice } from "../DiceDiv/DiceData.ts";
 
 type DiceChoicesProps = {
   dices: Dice[];
+  callbackFunction: () => void;
 };
 
-export default function DiceChoices({ dices }: DiceChoicesProps) {
+export default function DiceChoices({
+  dices,
+  callbackFunction,
+}: DiceChoicesProps) {
   return (
     <section id="dice-choices">
       <h2>Choose a dice</h2>
       <ul>
         {dices.map((dice) => (
           <li key={dice.id}>
-            <button>{dice.label}</button>
+            <button onClick={callbackFunction}>{dice.label}</button>
           </li>
         ))}
       </ul>
