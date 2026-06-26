@@ -7,6 +7,7 @@ import RollButton from "./components/RollButton.tsx";
 
 function App() {
   const [dice, setDice] = useState(20);
+  const [value, setValue] = useState(1);
   const diceChoices: { label: string; faces: number }[] = [
     { label: "D4", faces: 4 },
     { label: "D6", faces: 6 },
@@ -23,6 +24,24 @@ function App() {
   function setCurrentDice(event: React.MouseEvent<HTMLButtonElement>): void {
     console.log(event);
     setDice(Number(event.currentTarget.value));
+  }
+
+  /**
+   * Set the value of the dice after a roll.
+   * @return {void}
+   */
+  function setCurrentValue() {
+    setValue(roll(1, dice));
+  }
+
+  /**
+   * Rolls the dice and change the value display.
+   * @param {number} min - Possible minimum value of the dice (default: 1).
+   * @param {number} max - Possible maximum value of the dice.
+   * @return {number} Random integer between min and max included.
+   */
+  function roll(min: number = 1, max: number): number {
+    return Math.floor(Math.random() * max) + min;
   }
 
   return (
@@ -51,8 +70,8 @@ function App() {
             <strong>Current dice</strong>: D{dice}
           </p>
         </section>
-        <DiceDiv dice={dice} />
-        <RollButton label="Roll" onClick={() => console.log("roll")} />
+        <DiceDiv dice={value} />
+        <RollButton label="Roll" onClick={() => setCurrentValue()} />
       </main>
 
       <footer></footer>
