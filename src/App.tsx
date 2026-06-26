@@ -1,10 +1,12 @@
 // src/App.tsx
 
+import { useState } from "react";
+
 import DiceDiv from "./components/DiceDiv/DiceDiv.tsx";
-import { Dice } from "./components/DiceDiv/DiceData.ts";
 import RollButton from "./components/RollButton.tsx";
 
 function App() {
+  const [dice, setDice] = useState(20);
   const diceChoices: { label: string; faces: number }[] = [
     { label: "D4", faces: 4 },
     { label: "D6", faces: 6 },
@@ -13,17 +15,14 @@ function App() {
     { label: "D12", faces: 12 },
     { label: "D20", faces: 20 },
   ];
-  let currentDice = new Dice(20);
 
   /**
    * Set the current dice to a new one depending on the dice choice button.
    * @return {void}
    */
   function setCurrentDice(event: React.MouseEvent<HTMLButtonElement>): void {
-    console.log(`Change current dice to ${event.currentTarget.id}`);
-    console.log("Before: ", currentDice);
-    currentDice.faces = Number(event.currentTarget.value);
-    console.log("After: ", currentDice);
+    console.log(event);
+    setDice(Number(event.currentTarget.value));
   }
 
   return (
@@ -49,8 +48,8 @@ function App() {
             ))}
           </ul>
         </section>
-        <DiceDiv dice={currentDice} />
-        <RollButton label="Roll" onClick={() => currentDice.roll} />
+        <DiceDiv dice={dice} />
+        <RollButton label="Roll" onClick={() => console.log("roll")} />
       </main>
 
       <footer></footer>

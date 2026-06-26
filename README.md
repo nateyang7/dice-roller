@@ -3,6 +3,8 @@
 ## Description
 A simple dice roller made for D&D sessions.
 
+(WIP)
+
 ## Contents
 - [Features](#Features)
 - [Installation](#Installation)
