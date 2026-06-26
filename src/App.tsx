@@ -1,11 +1,20 @@
 // src/App.tsx
 
+import DiceChoices from "./components/DiceChoices/DiceChoices.tsx";
 import DiceDiv from "./components/DiceDiv/DiceDiv.tsx";
 import { Dice } from "./components/DiceDiv/DiceData.ts";
 import RollButton from "./components/RollButton.tsx";
 
 function App() {
-  const dice: Dice = new Dice(6);
+  const dices: Dice[] = [
+    new Dice(4),
+    new Dice(6),
+    new Dice(8),
+    new Dice(10),
+    new Dice(12),
+    new Dice(20),
+  ];
+  let currentDice = dices[0];
 
   return (
     <>
@@ -14,20 +23,9 @@ function App() {
       </header>
 
       <main>
-        <section id="dice-choice">
-          <h2>Choose a dice to roll</h2>
-          <ul>
-            <li>D4</li>
-            <li>D6</li>
-            <li>D8</li>
-            <li>D10</li>
-            <li>D12</li>
-            <li>D20</li>
-          </ul>
-        </section>
-
-        <DiceDiv dice={dice} />
-        <RollButton label="Roll" onClick={() => dice.roll} />
+        <DiceChoices dices={dices} />
+        <DiceDiv dice={currentDice} />
+        <RollButton label="Roll" onClick={() => currentDice.roll} />
       </main>
 
       <footer></footer>
