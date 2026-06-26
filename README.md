@@ -11,6 +11,8 @@ A simple dice roller made for D&D sessions.
 - [Licence](#Licence)
 
 ## Features
+- [ ] Select a dice
+- [ ] 
 ### Dices
 - [ ] D4
 - [ ] D6

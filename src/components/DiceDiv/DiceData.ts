@@ -8,9 +8,6 @@ export class Dice {
   /** Dice's unique ID. */
   private _id: number;
 
-  /** Label of the dice (always in uppercase). */
-  private _label: string;
-
   /** Number of faces of the dice (Interval: [1, _faces]). */
   private _faces: number;
 
@@ -24,7 +21,6 @@ export class Dice {
   constructor(faces: number) {
     Dice.ID++;
     this._id = Dice.ID;
-    this._label = "D" + String(faces).toLocaleUpperCase();
     this._faces = faces;
   }
 
@@ -37,19 +33,21 @@ export class Dice {
   }
 
   /**
-   * Get the label of the dice.
-   * @return {string} Label of the dice.
-   */
-  get label(): string {
-    return this._label;
-  }
-
-  /**
    * Get the number of faces of the dice.
    * @return {number} Number of faces of the dice.
    */
   get faces(): number {
     return this._faces;
+  }
+
+  /**
+   * Set a new number of faces for the dice.
+   */
+  set faces(newFaces: number) {
+    if (newFaces < 2) {
+      throw new Error("New faces must be superior to 2");
+    }
+    this._faces = newFaces;
   }
 
   /**
@@ -67,10 +65,3 @@ export class Dice {
     this._face = Math.floor(Math.random() * (this._faces - 1) + 1);
   }
 }
-
-/*
-let test: Dice = new Dice(6);
-console.log(test.face);
-test.roll();
-console.log(test.face);
-*/
