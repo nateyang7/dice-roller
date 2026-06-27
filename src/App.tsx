@@ -18,10 +18,24 @@ function App() {
   ];
 
   /**
+   * Reset style for unselected buttons.
+   * @return {void}
+   */
+  function resetButton(): void {
+    const selectionButtons = document.querySelectorAll(".selectionButton");
+    console.log(selectionButtons)
+    for (const selectionButton of selectionButtons) {
+      selectionButton.classList.remove("selected");
+    }
+  }
+
+  /**
    * Set the current dice to a new one depending on the dice choice button.
    * @return {void}
    */
   function setCurrentDice(event: React.MouseEvent<HTMLButtonElement>): void {
+    resetButton();
+    event.currentTarget.classList.add("selected");
     setDice(Number(event.currentTarget.value));
   }
 
@@ -57,6 +71,7 @@ function App() {
               <li key={dice.label}>
                 <button
                   id={dice.label}
+                  className="selectionButton"
                   onClick={(event) => setCurrentDice(event)}
                   value={dice.faces}
                 >
@@ -65,9 +80,6 @@ function App() {
               </li>
             ))}
           </ul>
-          <p>
-            <strong>Current dice</strong>: D{dice}
-          </p>
         </section>
         <DiceDiv dice={value} />
         <RollButton label="Roll" onClick={() => setCurrentValue()} />

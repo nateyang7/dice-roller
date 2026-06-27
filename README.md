@@ -18,12 +18,12 @@ A simple dice roller made for D&D sessions.
 - [X] Roll
 
 ### Dices
-- [ ] D4
-- [ ] D6
-- [ ] D8
-- [ ] D10
-- [ ] D12
-- [ ] D20
+- [X] D4
+- [X] D6
+- [X] D8
+- [X] D10
+- [X] D12
+- [X] D20
 
 ## Installation
 ```bash

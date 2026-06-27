@@ -1,0 +1,19 @@
+/* src/index.css */
+
+:root {
+    --selection-button-bg: #D9D9D9;
+    --selection-button-text: #252525;
+}
+
+
+/* === Selection buttons === */
+
+.selectionButton {
+    background: var(--selection-button-bg);
+    color: var(--selection-button-text);
+}
+
+.selected {
+    background: #252525;
+    color: #D9D9D9;
+}
