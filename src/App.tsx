@@ -64,8 +64,8 @@ function App() {
       </header>
 
       <main>
-        <section id="dice-choices">
-          <h2>Choose a dice</h2>
+        <section id="choices">
+          <h2>DICES</h2>
           <ul>
             {diceChoices.map((dice) => (
               <li key={dice.label}>
@@ -80,9 +80,12 @@ function App() {
               </li>
             ))}
           </ul>
+          
+          <div id="dice-value">{value}</div>
         </section>
-        <DiceDiv dice={value} />
+
         <RollButton label="Roll" onClick={() => setCurrentValue()} />
+
       </main>
 
       <footer></footer>
