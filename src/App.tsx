@@ -60,7 +60,7 @@ function App() {
   return (
     <>
       <header>
-        <h1>Dice Roller</h1>
+        <h1>&#127922; Dice Roller &#127922;</h1>
       </header>
 
       <main>
