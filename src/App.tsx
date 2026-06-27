@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 
-import DiceDiv from "./components/DiceDiv.tsx";
 import RollButton from "./components/RollButton.tsx";
 
 function App() {

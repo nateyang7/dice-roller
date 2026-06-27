@@ -13,6 +13,13 @@
     padding: 0;
     background: var(--primary);
     color: var(--secondary);
+
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 main {
@@ -64,9 +71,18 @@ h2 {
     color: var(--selection-button-text);
 }
 
+.selectionButton:hover {
+    border: 2px solid var(--selection-button-border)
+}
+
 .selected {
     background: #252525;
     color: #D9D9D9;
     border: 1px solid var(--selection-button-border);
     border-radius: 5px;
+}
+
+#roll-button {
+    width: 6rem;
+    height: 2rem;
 }
