@@ -15,6 +15,13 @@
     color: var(--secondary);
 }
 
+main {
+    display: grid;
+    place-items: center;
+    padding: 4rem;
+    gap: 3rem;
+}
+
 header {
     margin: 1rem;
 }
@@ -30,6 +37,13 @@ h2 {
 }
 
 /* === Selection buttons === */
+
+#dice-choices ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    list-style-type: none;
+}
 
 .selectionButton {
     width: 3rem;
