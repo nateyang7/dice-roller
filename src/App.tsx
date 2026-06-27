@@ -87,7 +87,7 @@ function App() {
 
       </main>
 
-      <footer></footer>
+      <footer>&copy; Dice Roller 2026</footer>
     </>
   );
 }

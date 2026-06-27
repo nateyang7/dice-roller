@@ -86,3 +86,7 @@ h2 {
     width: 6rem;
     height: 2rem;
 }
+
+footer {
+    display: none;
+}
