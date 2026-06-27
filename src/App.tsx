@@ -63,6 +63,7 @@ function App() {
       </header>
 
       <main>
+        <div id="dice-value">{value}</div>
         <section id="choices">
           <h2>DICES</h2>
           <ul>
@@ -80,7 +81,6 @@ function App() {
             ))}
           </ul>
           
-          <div id="dice-value">{value}</div>
         </section>
 
         <RollButton label="Roll" onClick={() => setCurrentValue()} />
